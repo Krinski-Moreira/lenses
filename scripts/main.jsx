@@ -7,9 +7,9 @@ const myImage = document.querySelector("img");
 
 myImage.onclick = () => {
     const mySrc = myImage.getAttribute("src");
-    if (mySrc === "images/sab.png") {
-      myImage.setAttribute("src", "images/USP.jpg");
+    if (mySrc === "images/Einstein-cross.jpg") {
+      myImage.setAttribute("src", "images/Hubble-quasar.jpg");
     } else {
-      myImage.setAttribute("src", "images/sab.png");
+      myImage.setAttribute("src", "images/Einstein-cross.jpg");
     }
   };
