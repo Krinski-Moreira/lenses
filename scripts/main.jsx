@@ -13,3 +13,4 @@ myImage.onclick = () => {
       myImage.setAttribute("src", "images/Einstein-cross.jpg");
     }
   };
+//favicon-package-v0.16
