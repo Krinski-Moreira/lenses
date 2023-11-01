@@ -27,27 +27,22 @@ astro.fromFile(fitsFile)
 // Function to trigger file download
 function downloadFile() {
   // Content to be included in the downloaded file
-  const fileContent = "This is the content of the file.";
 
-  // Create a Blob with the file content
-  const blob = new Blob([fileContent], { type: 'application/fits' });
+  const fitsFileUrl = 'https://github.com/Krinski-Moreira/lenses/lensedquasars.fits';
 
-  // Create an <a> element
-  const a = document.createElement('a');
-  a.href = URL.createObjectURL(blob);
-  
-  // Set the filename for the downloaded file
-  a.download = 'lensedquasars.fits';
-
-  // Append the <a> element to the document body
-  document.body.appendChild(a);
-
-  // Simulate a click on the <a> element to trigger the download
-  a.click();
-
-  // Clean up: remove the <a> element and the URL object
-  document.body.removeChild(a);
-  URL.revokeObjectURL(a.href);
+  fetch(fitsFileUrl)
+    .then(response => response.blob())
+    .then(blob => {
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'lensedquasars.fits'; // Set the filename with the .fits extension
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    })
+    .catch(error => {
+      console.error('Error fetching the .fits file:', error);
+    });
 }
 
 // Add click event listener to the button
