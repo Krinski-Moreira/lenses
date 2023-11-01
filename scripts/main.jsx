@@ -4,7 +4,7 @@
   });
 */
 
-import { Astro } from 'astrojs';
+/*import { Astro } from 'astrojs';
 
 const astro = new Astro();
 
@@ -19,7 +19,7 @@ astro.fromFile(fitsFile)
   })
   .catch((error) => {
     console.error('Error reading FITS file:', error);
-  });
+  }); */
 //Please note that you'll need actual FITS files to test with and work on in your JavaScript application. AstroJS and similar libraries provide methods to read and manipulate FITS files, making it possible to extract information, analyze data, and perform operations on astronomical data stored in these files.
 
 //Always refer to the library's documentation or other relevant resources for specific instructions on how to read, extract, and manipulate the data stored in FITS files using the library of your choice, as methods and available functionalities might differ between libraries.
@@ -51,13 +51,14 @@ function downloadFile() {
 }
 
 // Add click event listener to the button
-const downloadButton = document.getElementById('downloadButton');
-downloadButton.addEventListener('click', downloadFile);
-
-
-
-
-
+document.addEventListener('DOMContentLoaded', function() {
+  var myButton = document.getElementById('downloadButton');
+  if (myButton) {
+    myButton.onclick = downloadFile
+  } else {
+    console.error("Button not found");
+  }
+});
 
 const myImage = document.querySelector("img");
 
