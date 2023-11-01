@@ -30,7 +30,7 @@ function downloadFile() {
   const fileContent = "This is the content of the file.";
 
   // Create a Blob with the file content
-  const blob = new Blob([fileContent], { type: 'text/plain' });
+  const blob = new Blob([fileContent], { type: 'application/fits' });
 
   // Create an <a> element
   const a = document.createElement('a');
