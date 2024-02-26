@@ -53,6 +53,24 @@
         <li>lenses</li>
       </ul>
     -->
+    <div>
+      <form class="form-horizontal well">
+        <legend>
+          <h3>
+            <div id="title">HTML5 File API</div>
+          </h3>
+        </legend>
+        <fieldset>
+            <label for="csvFileInput"> <strong>CSV File:</strong>
+            </label>
+            <input type="file" id="csvFileInput" onchange="handleFiles(this.files)"
+            accept=".csv">
+          </div>
+        </fieldset>
+      </form>
+      <div id="output">
+      </div>
+    </div>
 
     <footer>
         <p>©Copyright 2050 by nobody. All rights reversed.</p>
