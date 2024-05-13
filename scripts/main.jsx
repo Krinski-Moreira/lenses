@@ -25,7 +25,7 @@ astro.fromFile(fitsFile)
 //Always refer to the library's documentation or other relevant resources for specific instructions on how to read, extract, and manipulate the data stored in FITS files using the library of your choice, as methods and available functionalities might differ between libraries.
 
 // Function to trigger file download
-function downloadFile() {
+/*function downloadFile() {
   // Content to be included in the downloaded file
 
   const fitsFileUrl = 'https://github.com/Krinski-Moreira/lenses/lensedquasars.fits';
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
   } else {
     console.error("Button not found");
   }
-});
+}); */
 
 const myImage = document.querySelector("img");
 
@@ -78,7 +78,7 @@ fetch('https://krinski-moreira.github.io/lenses/statistics.json')
   .catch((err) => console.error(`Fetch problem: ${err.message}`));
 
 function assign(stats){
-  const confirmed = document.querySelector('#confirmed')
-  const doubles = document.querySelector('#Double')
-  console.log(confirmed, doubles)
+  //const confirmed = document.querySelector('#Confirmed');
+  //const doubles = document.querySelector('#Double');
+  console.log(stats.confirmed, stats.doubles);
 }
