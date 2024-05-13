@@ -80,5 +80,5 @@ fetch('https://krinski-moreira.github.io/lenses/statistics.json')
 function assign(stats){
   //const confirmed = document.querySelector('#Confirmed');
   //const doubles = document.querySelector('#Double');
-  console.log(stats.confirmed, stats.doubles);
-}
+  console.log(stats, stats.Confirmed, stats.Double);
+}S
