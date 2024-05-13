@@ -79,5 +79,6 @@ fetch('/statistics.json')
 
 function assign(stats){
   const confirmed = document.querySelector('#confirmed')
-  console.log(confirmed)
+  const doubles = document.querySelector('#Double')
+  console.log(confirmed, doubles)
 }
