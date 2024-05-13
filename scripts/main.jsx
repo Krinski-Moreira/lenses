@@ -67,7 +67,7 @@ myImage.onclick = () => {
   };
 //favicon-package-v0.16
 
-fetch('statistics.json')
+fetch('/statistics.json')
 .then((response) => {
     if (!response.ok) {
       throw new Error(`HTTP error: ${response.status}`);
