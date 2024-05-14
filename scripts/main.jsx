@@ -80,10 +80,10 @@ fetch('https://krinski-moreira.github.io/lenses/statistics.json')
 function assign(stats){
   //const confirmed = document.querySelector('#Confirmed');
   //const doubles = document.querySelector('#Double');
-  document.getElementById("nlenses").innerHTML = stats.Confirmed
-  document.getElementById("ndoubles").innerHTML = stats.Double
-  document.getElementById("nquads").innerHTML = stats.Quad
-  document.getElementById("graL").innerHTML = stats.GraL
+  document.getElementById("nlenses").textContent = stats.Confirmed
+  document.getElementById("ndoubles").textContent = stats.Double
+  document.getElementById("nquads").textContent = stats.Quad
+  document.getElementById("graL").textContent = stats.GraL
   console.log(stats, stats.Confirmed, stats.Double);
-  console.log(typeof stats)
+  console.log(typeof stats, stats[0])
 }
