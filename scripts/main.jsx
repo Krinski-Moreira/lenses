@@ -88,7 +88,7 @@ function assign(stats){
   console.log(typeof stats, stats[0]);
   var keys = Object.keys(stats);
   console.log(keys, stats[keys[0]])
-  for(var i = 0; i < stats.length; i++){
+  for(var i = 0; i < keys.length; i++){
     console.log(keys[i], stats[keys[i]]);
   }
 }
