@@ -86,10 +86,9 @@ function assign(stats){
   document.getElementById("graL").textContent = stats.GraL;
   console.log(stats, stats.Confirmed, stats.Double);
   console.log(typeof stats, stats[0]);
-  const jsStats = JSON.parse(stats);
-  console.log(typeof jsStats, jsStats[0]);
-  var keys = Object.keys(jsStats);
-  for(var i = 0; i < jsStats.length; i++){
-    console.log(keys[i], jsStats[i]);
+  var keys = Object.keys(stats);
+  console.log(keys, stats[keys[0]])
+  for(var i = 0; i < stats.length; i++){
+    console.log(keys[i], stats[keys[i]]);
   }
 }
