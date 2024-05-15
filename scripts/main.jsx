@@ -91,4 +91,25 @@ function assign(stats){
   for(var i = 0; i < keys.length; i++){
     console.log(keys[i], stats[keys[i]]);
   }
+
+  const table = document.getElementById("tableStats");
+  const tblBody = document.createElement("tbody");
+  const row1 = document.createElement("tr");
+  for(var i = 0; i < keys.length; i++){
+    const cell = document.createElement("td");
+    const cellText = document.createTextNode(keys[i]);
+    cell.appendChild(cellText);
+    row1.appendChild(cell);
+  }
+  tblBody.appendChild(row1);
+
+  const row2 = document.createElement("tr");
+  for(var i = 0; i < keys.length; i++){
+    const cell = document.createElement("td");
+    const cellText = document.createTextNode(stats[keys[i]]);
+    cell.appendChild(cellText);
+    row2.appendChild(cell);
+  }
+  tblBody.appendChild(row2);
+  table.appendChild(tblBody);
 }
